@@ -14,7 +14,11 @@ function App({users, channels}) {
                 changePage={changePage}
                 activePage={activeWindow}
             />
-            <Content activePage={activeWindow}/>
+            <Content
+                activePage={activeWindow}
+                channels={channels}
+                users={users}
+            />
         </div>
     );
 }

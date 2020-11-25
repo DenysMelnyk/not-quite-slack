@@ -197,14 +197,14 @@ export const users = [
                 text: 'Message from Zach'
             },
             {
-                id: 'q0rgrt34h1',
+                id: 'q0rgrtr34h1',
                 author: 'Dave',
                 authorAvatar: userAvatars.userDave,
                 date: '29-Nov-20',
                 text: 'Message from Dave'
             },
             {
-                id: 'q0rgrt34h1',
+                id: 'q0rgr8t34h1',
                 author: 'Denys',
                 authorAvatar: userAvatars.userDenys,
                 date: '29-Nov-20',
@@ -225,14 +225,14 @@ export const users = [
                 text: 'Message from Erin'
             },
             {
-                id: 'pq0rgrt34h1',
+                id: 'pq0rgrt340h1',
                 author: 'Dave',
                 authorAvatar: userAvatars.userDave,
                 date: '29-Nov-20',
                 text: 'Message from Dave'
             },
             {
-                id: 'pq0rgrt34h1',
+                id: 'pq0rgrt3sr4h1',
                 author: 'Denys',
                 authorAvatar: userAvatars.userDenys,
                 date: '29-Nov-20',
