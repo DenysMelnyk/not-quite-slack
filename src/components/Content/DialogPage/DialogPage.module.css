@@ -1,9 +1,16 @@
 .DialogPage {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
-
 .DialogPage h2 {
     padding: 0 20px;
+}
+
+.AvailableMessages {
+    display: flex;
+    flex-direction: column;
 }
 
 .NewMessageWrap {

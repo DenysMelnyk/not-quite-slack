@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {SlackContext} from "../../context/SlackProvider";
 import SidebarList from "./SidebarList/SidebarList";
 import styles from './Sidebar.module.css'
 
-const Sidebar = ({users, channels, changePage, activePage}) => {
-    const [usersList, setUsersList] = useState(users);
-    const [channelsList, setChannelsList] = useState(channels);
+const Sidebar = ({changePage, activePage}) => {
+    const {data, changeData} = useContext(SlackContext)
+    const [usersList, setUsersList] = useState(data.users);
+    const [channelsList, setChannelsList] = useState(data.channels);
 
     return (
         <div className={styles.Sidebar}>

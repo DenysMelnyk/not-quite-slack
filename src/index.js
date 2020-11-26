@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {users, channels} from "./store/store";
+import SlackContextProvider from "./context/SlackProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App
-        users={users}
-        channels={channels}
-    />
+    <SlackContextProvider>
+        <App/>
+    </SlackContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -3,21 +3,17 @@ import styles from './App.module.css';
 import Sidebar from "./components/Sidebar/Sidebar";
 import Content from "./components/Content/Content";
 
-function App({users, channels}) {
+function App() {
     const [activeWindow, setActiveWindow] = useState('');
     const changePage = value => setActiveWindow(value)
     return (
         <div className={styles.App}>
             <Sidebar
-                channels={channels}
-                users={users}
                 changePage={changePage}
                 activePage={activeWindow}
             />
             <Content
                 activePage={activeWindow}
-                channels={channels}
-                users={users}
             />
         </div>
     );

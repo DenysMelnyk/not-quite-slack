@@ -1,27 +1,18 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useContext} from 'react';
 import styles from './DialogPage.module.css';
 import Message from "./Message/Message";
+import {SlackContext} from "../../../context/SlackProvider";
 
-const DialogPage = ({pageData}) => {
+const DialogPage = ({pageData, dialogType}) => {
+    const {changeData} = useContext(SlackContext)
     const inputRef = useRef();
     const [inputMessage, setInputMessage] = useState('');
-    const {messageHistory} = pageData;
-    const [messages, setMessages] = useState(messageHistory);
     const inputHandler = event => {
         setInputMessage(event.target.value)
     }
     const formSubmitHandler = event => {
         event.preventDefault();
-        setMessages([
-            ...messages,
-            {
-                id: 'test-rk',
-                author: 'Denys',
-                authorAvatar: null,
-                date: '29-Nov-20',
-                text: inputRef.current.value
-            }
-        ])
+        changeData(dialogType, pageData.name, inputRef.current.value)
         inputRef.current.value = '';
         setInputMessage('');
 
@@ -37,8 +28,10 @@ const DialogPage = ({pageData}) => {
     ))
     return (
         <div className={styles.DialogPage}>
-            <h2>The dialogs of {pageData.name}</h2>
-            {dialogsHistory}
+            <div className={styles.AvailableMessages}>
+                <h2>The dialogs of {pageData.name}</h2>
+                {dialogsHistory}
+            </div>
             <div className={styles.NewMessageWrap}>
                 <form onSubmit={formSubmitHandler}>
                     <input
