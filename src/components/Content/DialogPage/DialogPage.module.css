@@ -1,3 +1,27 @@
 .DialogPage {
-    padding: 20px;
+
+}
+
+.DialogPage h2 {
+    padding: 0 20px;
+}
+
+.NewMessageWrap {
+    padding: 10px;
+    border-top: 1px solid #cccccc;
+}
+
+.NewMessageInput {
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid #cccccc;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 5px;
+    color: #cccccc;
+    font-weight: bold;
+}
+.NewMessageInput:focus {
+    border: 2px solid #cccccc;
+    color: #555555;
 }
