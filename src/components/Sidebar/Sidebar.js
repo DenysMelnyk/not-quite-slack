@@ -4,7 +4,7 @@ import SidebarList from "./SidebarList/SidebarList";
 import styles from './Sidebar.module.css'
 
 const Sidebar = ({changePage, activePage}) => {
-    const {data, changeData} = useContext(SlackContext)
+    const {data} = useContext(SlackContext)
     const [usersList, setUsersList] = useState(data.users);
     const [channelsList, setChannelsList] = useState(data.channels);
 
